@@ -7,7 +7,7 @@
 --  `:lua require('lush').ify()`
 
 local lush = require('lush')
-local colors = require('lua.lush-theme.colors');
+local colors = require('lush-theme.colors');
 local hsl = lush.hsl
 ---@diagnostic disable: undefined-global
 local theme = lush(function(injected_functions)

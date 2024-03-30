@@ -1,6 +1,5 @@
 local colors = require('lush-theme.colors');
 
-
 return {
 	normal = {
 		a = { fg = colors.fg, bg = colors.green },
