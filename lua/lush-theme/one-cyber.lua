@@ -87,8 +87,8 @@ local theme = lush(function(injected_functions)
 		GutterGitDeleted { fg = colors.red },
 		Comment { fg = hsl(colors.bg).li(30) }, -- Any comment
 
-		Constant { fg = colors.lightBlue }, -- (*) Any constant
-		String { fg = colors.yellow2 },   --   A string constant: "this is a string"
+		Constant { fg = colors.lightBlue },  -- (*) Any constant
+		String { fg = hsl(colors.green).li(-40) }, --   A string constant: "this is a string"
 		-- Character      { }, --   A character constant: 'c', '\n'
 		-- Number { fg = #F9C35A }, --   A number constant: 234, 0xff
 		-- Boolean        { }, --   A boolean constant: TRUE, false
@@ -116,7 +116,7 @@ local theme = lush(function(injected_functions)
 		-- Structure      { }, --   struct, union, enum, etc.
 		-- Typedef { fg = red },  --   A typedef
 
-		Special { fg = hsl(colors.red).li(-20) }, -- (*) Any special symbol
+		Special { fg = hsl(colors.blue) }, -- (*) Any special symbol
 		-- SpecialChar    { }, --   Special character in a constant
 		-- Tag            { }, --   You can use CTRL-] on this
 		-- Delimiter      { }, --   Character that needs attention
@@ -137,7 +137,7 @@ local theme = lush(function(injected_functions)
 		-- LspSignatureActiveParameter { } , -- Used to highlight the active parameter in the signature help. See |vim.lsp.handlers.signature_help()|.
 
 		--
-		-- DiagnosticError            { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
+		DiagnosticError { fg = colors.red }, -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticWarn             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticInfo             { } , -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
 		-- DiagnosticHint {},         -- Used as the base highlight group. Other Diagnostic highlights link to this by default (except Underline)
@@ -184,7 +184,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@boolean"           { }, -- Boolean
 		-- sym"@float"             { }, -- Float
 		-- sym"@function"          { }, -- Function
-		sym("@function.builtin") { fg = colors.red }, -- Special
+		sym("@function.builtin") { fg = colors.purple3 }, -- Special
 		-- sym"@function.macro"    { }, -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym("@method") { fg = red }, -- Function
@@ -206,14 +206,13 @@ local theme = lush(function(injected_functions)
 		-- sym"@include"           { }, -- Include
 		-- sym"@preproc"           { }, -- PreProc
 		-- sym"@debug"             { }, -- Debug
-		-- sym"@tag"               { }, -- Tag
+		sym("@tag") { fg = hsl(colors.fg).li(-30) }, -- Tag
 		sym("@lsp.type.type") { fg = colors.yellow },
 		sym("@lsp.text.todo") { bg = hsl(colors.green).li(-30), fg = colors.fg },
 		sym("lsp.text.keyword") { fg = colors.purple2 },
 		sym("@lsp.type.parameter") { fg = colors.blue },
-		sym("@lsp.type.typeParameter") { fg = colors.purple }
-
-		-- sym("@lsp.type.variable") { fg = red },
+		sym("@lsp.type.typeParameter") { fg = colors.purple },
+		sym("@lsp.type.variable") { fg = hsl(colors.blue).li(50) },
 		-- sym("boolean") { fg = yellow }
 		-- sym()
 	}
