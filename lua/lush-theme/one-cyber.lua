@@ -185,7 +185,7 @@ local theme = lush(function(injected_functions)
 		-- sym"@float"             { }, -- Float
 		-- sym"@function"          { }, -- Function
 		sym("@function.builtin") { fg = colors.purple3 }, -- Special
-		-- sym"@function.macro"    { }, -- Macro
+		sym "@function.macro" { fg = colors.yellow2 }, -- Macro
 		-- sym"@parameter"         { }, -- Identifier
 		-- sym("@method") { fg = red }, -- Function
 		-- sym"@field"             { }, -- Identifier
