@@ -73,7 +73,7 @@ local theme = lush(function(injected_functions)
 		-- tabline {},   -- tab pages line, not active tab page label
 		-- tablinefill { bg = red }, -- tab pages line, where there are no labels
 		-- tablinesel     { }, -- tab pages line, active tab page label
-		-- title          { }, -- titles for output from ":set all", ":autocmd" etc.
+		title { fg = hsl(colors.purple).li(15) }, -- titles for output from ":set all", ":autocmd" etc.
 		visual { bg = hsl(colors.bg).li(60) }, -- visual mode selection
 		-- VisualNOS {},                              -- Visual mode selection when vim is "Not Owning the Selection".
 		-- WarningMsg     { }, -- Warning messages
